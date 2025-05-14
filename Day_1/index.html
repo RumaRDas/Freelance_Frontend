@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/mystyle.css" />
     <title>Day One</title>
   </head>
   <body>
-    <section id="heading">
+    <container id="heading">
       <div><h1>Ruma Das</h1></div>
-    </section>
-    <section id="body">
+    </container>
+    <container id="body">
       <div>
         <p>
           I am a web developer and i want to build my career as a freelancer
@@ -19,7 +20,7 @@
         </p>
       </div>
       <div>
-        <h1>My Skills</h1>
+        <h3>My Skills</h3>
       </div>
       <div>
         <ul>
@@ -29,18 +30,34 @@
           <li>React.js</li>
         </ul>
       </div>
-    </section>
-    <section id="contact">
+    </container>
+    <container id="contact">
       <div>
         <form>
           <label for="name">Name</label><br />
-          <input type="text" name="name" value="name" /><br />
+          <input
+            type="text"
+            name="name"
+            value="name"
+            class="contact_input"
+          /><br />
           <label for="email">Email</label><br />
-          <input type="email" name="email" value="email" /><br />
-          <textarea name="message" rows="5" cols="50"></textarea><br />
+          <input
+            type="email"
+            name="email"
+            value="email"
+            class="contact_input"
+          /><br />
+          <textarea
+            name="message"
+            rows="5"
+            cols="50"
+            class="contact_input"
+          ></textarea
+          ><br />
           <button>Submit</button>
         </form>
       </div>
-    </section>
+    </container>
   </body>
 </html>
