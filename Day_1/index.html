@@ -4,15 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/mystyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
     <title>Ruma Das - Portfolio</title>
   </head>
   <body>
     <section id="heading">
       <div><h1>Ruma Das</h1></div>
     </section>
-    <section id="body">
-      <div>
-        <p>
+    <section>
+      <div class="about_box">
+        <p class="about">
           I am a web developer and i want to build my career as a freelancer I
           am a web developer, and I want to build my career as a freelance
           frontend developer. I have been out of the field for the past year and
@@ -20,21 +24,41 @@
           path instead of looking for a traditional job.
         </p>
       </div>
-      <div>
-        <h3>My Skills</h3>
-      </div>
-      <div>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavasCript</li>
-          <li>React.js</li>
-        </ul>
+      <div class="about_des">
+        <div class="card">
+          <div>
+            <h3>Ruma Das</h3>
+          </div>
+          <div class="avatar_div">
+            <img
+              src="assets/images/profile_pic_1.jpg"
+              alt="Avatar"
+              class="avatar_pic"
+            />
+          </div>
+
+          <div>
+            <p>I am a frontend developer with 3 years experiences.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <h3>My Skills</h3>
+          </div>
+          <div>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavasCript</li>
+              <li>React.js</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
     <section id="contact">
-      <div>
-        <form>
+      <div class="contact_div">
+        <form class="form_width">
           <label for="name">Name:</label><br />
           <input
             type="text"
@@ -51,6 +75,7 @@
             class="contact_input"
             placeholder="Enter your email"
           /><br />
+          <label for="message">Message:</label><br />
           <textarea
             id="message"
             name="message"
@@ -63,6 +88,6 @@
         </form>
       </div>
     </section>
-    <script src="js/myscript.js"></script>
+    <!-- <script src="js/myscript.js"></script> -->
   </body>
 </html>

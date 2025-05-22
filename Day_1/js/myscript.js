@@ -63,22 +63,42 @@ console.log("********************");
 forEachLoop(myTools);
 //Day 5
 
-const comNumber = Math.floor(Math.random() * 10) + 1;
+const guessGame = () => {
+  const comNumber = Math.floor(Math.random() * 10) + 1;
+  console.log("Guess number", comNumber);
+  let guess = Number(prompt(`Please enter a number`));
+  let attempt = 1;
 
-const enterNumber = prompt(`Please enter a number`);
-const guessGame = (num) => {
-  const guessNumber = Number(num);
-  if (guessNumber < comNumber) {
-    console.log(` Your number is smaller than the guess Number`);
-  } else if (guessNumber > comNumber) {
-    console.log(`Your number is too big`);
+  while (guess !== comNumber && attempt <= 5 && guess !== 0) {
+    console.log("attempt", attempt);
+    console.log("Guess", guess);
+    if (isNaN(guess)) {
+      console.log("Not a number");
+      attempt++;
+      guess = Number(prompt(`Please enter a number`));
+      continue;
+    }
+    if (guess < comNumber) {
+      guess = Number(prompt(` Your number is smaller than the guess Number`));
+    } else if (guess > comNumber) {
+      guess = Number(prompt(`Your number is too big`));
+    }
+    attempt++;
+  }
+  if (guess === comNumber) {
+    alert(`🎉 Correct! You guessed it.`);
+  } else if (guess === 0) {
+    alert(`🚫 You quit the game.`);
   } else {
-    console.log(`🎉 Correct! You guessed it.`);
+    alert(`❌ You ran out of attempts. Game over. the number is ${comNumber}`);
+  }
+
+  // Ask to play again
+  const playAgain = confirm("Do you want to play again?");
+  if (playAgain) {
+    guessGame();
+  } else {
+    alert("Thanks for playing!");
   }
 };
-if (isNaN(enterNumber)) {
-  const numTwo = prompt("Please enter a valid number.");
-  guessGame(numTwo);
-} else {
-  guessGame(enterNumber);
-}
+guessGame();
